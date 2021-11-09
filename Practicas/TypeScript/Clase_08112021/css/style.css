@@ -1,0 +1,10 @@
+div {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    width: 50%;
+    border: 3px solid #162c40;
+    padding: 10px;
+    background: #162c40;
+    padding: 3px;
+    border-radius: 5px
+}
