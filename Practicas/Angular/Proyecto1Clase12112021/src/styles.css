@@ -49,4 +49,8 @@ body{
 input.form-control.mr-sm-2.border-warning::placeholder{
     color: #6c757d61;
 }
+
+.navbar-dark .navbar-nav .nav-link.active{
+    color: #ffc107 !important;
+}
   
