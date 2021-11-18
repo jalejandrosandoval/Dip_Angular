@@ -9,6 +9,7 @@ import { SearcherComponent } from './Components/Shared/searcher/searcher.compone
 //Import Components Own
 import { HeroesComponent } from './Components/Heroes/heroes.component';
 import { HeroeComponent } from './Components/Heroe/heroe.component';
+import { ExamplePipeComponent } from './Components/Pipes/example-pipe/example-pipe.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'heroe/:index', component: HeroeComponent },
   { path: 'search/:term', component: SearcherComponent},
+  { path: 'pipes', component: ExamplePipeComponent},
   { path: '**', pathMatch: 'full', redirectTo: "home" },
 ];
 

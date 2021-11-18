@@ -1,0 +1,181 @@
+<div class="d-  sm-flex align-items-center justify-content-center mb-4">
+    <h1 class="text-center h3 mb-0 text-gray-800">
+        <b> Pipes </b>
+    </h1>
+</div>
+
+<div id="accordion" class="border-0">
+    <div class="card border-0">
+        <div class="card-header bg-white" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-outline-warning" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Pipes
+                </button>
+            </h5>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <table class="table">
+                            <thead class='thead-light'>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Pipe</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td> {{ _Name }} </td>
+                                    <td> uppercase </td>
+                                    <td> {{ _Name | uppercase }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Name }} </td>
+                                    <td> lowercase </td>
+                                    <td> {{ _Name | lowercase }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Name }} </td>
+                                    <td> slice:2 </td>
+                                    <td> {{ _Name | slice:2 }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ PI }} </td>
+                                    <td> number </td>
+                                    <td> {{ PI | number:'3.0-0' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ PI }} </td>
+                                    <td> number </td>
+                                    <td> {{ PI | number:'2.0-2' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Percent }} </td>
+                                    <td> percent </td>
+                                    <td> {{ _Percent | percent }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Percent }} </td>
+                                    <td> percent:'.1' </td>
+                                    <td> {{ _Percent | percent:'.1' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Percent }} </td>
+                                    <td> percent:'2.2-2' </td>
+                                    <td> {{ _Percent | percent:'2.2-2' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Salary }} </td>
+                                    <td> currency </td>
+                                    <td> {{ _Salary | currency }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Salary }} </td>
+                                    <td> currency </td>
+                                    <td> {{ _Salary | currency:'EUR' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Salary }} </td>
+                                    <td> currency </td>
+                                    <td> {{ _Salary | currency:'CAD': 'symbol': '.0-0' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Date }} </td>
+                                    <td> date </td>
+                                    <td> {{ _Date | date }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Date }} </td>
+                                    <td> date:'medium' </td>
+                                    <td> {{ _Date | date:'medium' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Date }} </td>
+                                    <td> date:'short' </td>
+                                    <td> {{ _Date | date:'short' }} </td>
+                                </tr>
+                                <tr>
+                                    <td> {{ _Date }} </td>
+                                    <td> date:'MMMM - dd' </td>
+                                    <td> {{ _Date | date:'MMMM - dd':'':_Language }} </td>
+                                </tr>
+
+                                <tr>
+                                    <td> {{ _Date }} </td>
+                                    <td> date:'short' </td>
+                                    <td> {{ _Date | date:'MMMM - dd':'':_Language }} </td>
+                                </tr>
+
+                                <tr>
+                                    <td> {{ _Name }} </td>
+                                    <td> mayusculas </td>
+                                    <td> {{ _Name | upercase }} </td>
+                                </tr>
+
+                                <tr>
+                                    <td> Actividad Contreseña {{ _ActivePassword }} </td>
+                                    <td>
+                                        <button class="btn btn-primary" (click)="_ActivePassword = !_ActivePassword">
+                                            Activar/Desactivar</button>
+                                    </td>
+                                    <td> {{ _Name | passwordPipe:_ActivePassword }} </td>
+                                </tr>
+
+                                <tr>
+                                    <td> Capitalizar {{ _Name2 }} </td>
+                                    <td> </td>
+                                    <td> {{ _Name2 | capitalizePipe }} </td>
+                                </tr>
+
+                                <tr>
+                                    <td> Promesa {{ valorPromesa }} </td>
+                                    <td> </td>
+                                    <td> {{ valorPromesa | async }} </td>
+                                </tr>
+
+                                <tr>
+                                    <td> Json {{ _Heroe }} </td>
+                                    <td> </td>
+                                    <td>
+                                <pre>
+                                    {{ _Heroe | json }}
+                                        </pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0">
+        <div class="card-header bg-white" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-outline-warning collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    DOM Seguro
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <iframe width="560" height="315" [src]="video | secureDOMPipe" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
