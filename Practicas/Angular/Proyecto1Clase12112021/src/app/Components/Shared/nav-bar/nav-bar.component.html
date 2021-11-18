@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-ColorPrimary bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/A-64.png" width="30" height="30" alt="Logo">
+  </a>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['home']">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['heroes']">Heroes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['about']">About</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="form-inline my-2 my-lg-0 formSearchPage">
+    <input class="form-control mr-sm-2 border-warning" #searchText type="text" placeholder="Buscar Héroe..." />
+    <button (click)="searchHeroe(searchText.value)" class="btn btn-warning my-2 my-sm-0">Buscar</button>
+  </div>
+
+</nav>

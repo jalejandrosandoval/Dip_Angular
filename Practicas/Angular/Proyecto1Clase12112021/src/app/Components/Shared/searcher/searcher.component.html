@@ -1,0 +1,18 @@
+<div class="d-sm-flex align-items-center justify-content-center mb-4">
+  <h1 class="text-center h3 mb-0 text-gray-800">
+    <small class="text-secondary"> <b> Buscando: </b>{{ _term }}...</small>
+  </h1>
+</div>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="_Heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-danger" role="alert">
+      No existen resultados con el término: <b>{{ _term }}</b>, verifique el texto ingresado.
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+  <app-heroes-card [HeroeInput]="_heroes" [index]="_heroes.Id" *ngFor="let _heroes of _Heroes"></app-heroes-card>
+</div>
