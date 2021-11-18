@@ -12,6 +12,8 @@ Diplomado de angular donde se encuentran las diferentes prácticas realizadas en
 
 ```bash
 └─ Practicas
+   ├─ Angular
+   |  └─ Proyecto1Clase12112021 => Proyecto Básico en Angular (Promesas, Servicios, Pipes,Components, Interfaces etc.).
    └─ TypeScript
       ├─ Clase_05112021 => Primeros Pasos en TypeScript.
       ├─ Clase_06112021 => Declaraciones y otros.
