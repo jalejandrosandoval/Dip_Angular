@@ -7,6 +7,12 @@
   </h1>
 </div>
 
+<div class="m-3">
+  <button type="button" class="btn btn-success btn-user text-white" (click)="addHeroe()"> 
+    <i class="fas fa-plus"></i> Agregar Heroe
+  </button>
+</div>
+
 <div class="card-columns">
   <app-heroes-card [HeroeInput]="_heroes" [index]="i" *ngFor="let _heroes of heroes; let i = index"></app-heroes-card>
 </div>
