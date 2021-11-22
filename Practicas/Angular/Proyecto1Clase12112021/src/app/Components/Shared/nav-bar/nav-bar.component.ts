@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import { LoginService } from 'src/app/Services/Login/login.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,9 +10,17 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private _router: Router) { }
+  _User: string = "";
+
+  constructor(private _router: Router,
+    private _loginService: LoginService) { }
 
   ngOnInit(): void {
+    this._loginService.getUser().subscribe(
+      user => {
+        this._User = user.Username;
+      }
+    );
   }
 
   // Method to find a heroe from any term. 
@@ -18,4 +28,10 @@ export class NavBarComponent implements OnInit {
     this._router.navigate(['/search', term]);
   }
 
+  // Method to termintate the session user.
+  public Logout(){
+    this._loginService._User$.unsubscribe();
+    this._loginService._User$ = new Subject();
+    this._User = "";
+  }
 }

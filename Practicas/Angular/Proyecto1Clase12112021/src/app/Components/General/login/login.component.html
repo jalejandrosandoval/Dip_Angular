@@ -1,0 +1,129 @@
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-8">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+
+                    <div class="card-body p-0">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img src="../../../../assets/backgrounds/bg_login.png"
+                                    class="img-fluid mx-auto d-block mt-4" alt="Responsive image" />
+                            </div>
+
+                            <div class="col-lg-6">
+
+                                <div class="p-5">
+
+                                    <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                                        <h3 class="text-center h3 mb-0 text-gray-800">
+                                            <b> 
+                                                LOGIN
+                                            </b>
+                                        </h3>
+                                    </div>
+
+                                    <hr>
+
+                                    <h6 class="h6 mb-0 text-center">
+                                        <p class="text-center">Ingrese sus Datos de Acesso</p>
+                                    </h6>
+
+                                    <br>
+
+                                    <div class="input-group mb-2 row">
+
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fas fa-user fa-sm" style="color:#FFC107"></i>
+                                            </div>
+                                        </div>
+
+                                        <input class="form-control form-control-user" type="text"
+                                            placeholder="Usuario..." title="Usuario" formControlName="Username"
+                                            required />                                    
+                                        <!-- <span *ngIf="gUsername.invalid && (gUsername.dirty || gUsername.touched)"
+                                            class="text-center text-warning">
+                                            <span *ngIf="gUsername.errors.required">
+                                                <b> * Campo Requerido: </b> Usuario Obligatorio!
+                                            </span>
+                                        </span> -->
+
+                                    </div>
+
+                                    <br>
+
+                                    <div class="input-group mb-2 row">
+
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fas fa-lock fa-sm" style="color:#FFC107"></i>
+                                            </div>
+                                        </div>
+
+                                        <input class="form-control form-control-user" type="password"
+                                            placeholder="Contraseña..." title="Contraseña"
+                                            formControlName="UserPassword" required />
+
+                                        <!-- <span *ngIf="gPassword.invalid && (gPassword.dirty || gPassword.touched)"
+                                            class="text-center text-warning">
+                                            <span *ngIf="gPassword.errors.required">
+                                                <b> * Campo Requerido: </b> Contraseña Obligatoria!
+                                            </span>
+                                        </span> -->
+
+                                    </div>
+
+                                    <br>
+
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck" title="Mantener Sesión Iniciada">
+                                            <label class="custom-control-label" for="customCheck"> Mantener Sesión
+                                                Iniciada </label>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="text-center">
+                                        <button type="submit" value="Login" class="btn btn-warning btn-user btn-block"
+                                            [disabled]="loginForm.invalid" title="Ingresar al Sistema">
+                                            Ingresar
+                                        </button>
+                                    </div>
+
+                                    <hr />
+
+                                    <div class="text-center">
+
+                                        <button class="btn btn-link btn-user btn-block" style="text-decoration:none"
+                                            routerLink="/home"  title="Recordar Contraseña">
+                                            <b> Recordar Contraseña </b>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

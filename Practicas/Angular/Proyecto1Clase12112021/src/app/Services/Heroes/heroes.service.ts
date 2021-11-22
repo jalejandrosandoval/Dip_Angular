@@ -61,7 +61,7 @@ export class HeroesService {
     // }
   ];
 
-  private _Heroes$: Subject<IHeroes[]>;
+  public _Heroes$: Subject<IHeroes[]>;
   private _Heroes: IHeroes[] = [];
  
 

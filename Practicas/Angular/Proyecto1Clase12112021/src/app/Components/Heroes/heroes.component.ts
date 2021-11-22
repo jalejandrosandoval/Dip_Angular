@@ -35,4 +35,8 @@ export class HeroesComponent implements OnInit {
     this._heroesService.addHeroe(this._heroeNew);
   }
 
+  // public ngOnDestroy(): void{
+  //   this._heroesService._Heroes$.unsubscribe();
+  // }
+
 }

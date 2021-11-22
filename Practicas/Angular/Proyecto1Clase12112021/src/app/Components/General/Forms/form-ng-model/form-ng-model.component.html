@@ -1,0 +1,78 @@
+<div class="card shadow mb-4">
+    <div class="card-header">
+        <h6 class="text-warning">
+            <i class="fas fa-user-plus"> </i> <b> Formulario... </b>
+        </h6>
+    </div>
+
+    <div class="card-body p-0">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="p-2">
+                    <form autocomplete="off" (ngSubmit)="saveForm()" #form="ngForm">
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label class="col-md-12 col-form-label">Nombre:</label>
+                                <div class="col-12">
+                                    <input class="form-control form-control-user" type="text" name="nombre"
+                                        [(ngModel)]="_Person.FirstName" placeholder="Nombre" required minlength="5"
+                                        #nombre="ngModel" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="col-md-12 col-form-label">Apellido:</label>
+                                <div class="col-12">
+                                    <input class="form-control form-control-user" type="text" name="apellido"
+                                        [(ngModel)]="_Person.LastName" placeholder="Apellido" required minlength="5"
+                                        #apellido="ngModel" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label class="col-2 col-form-label">Correo</label>
+                                <div class="col-8">
+                                    <input class="form-control form-control-user" type="email" name="correo"
+                                        [(ngModel)]="_Person.Email" placeholder="Correo"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required #correo="ngModel" />
+                                    <!-- <small *ngIf="correo.invalid && correo.touched" class="form-text text-danger">
+          El correo es obligatorio
+        </small> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="col-2 col-form-label">Pais</label>
+                                <div class="col-8">
+                                    <select class="form-control form-control-user" name="_CountryModel"
+                                        [(ngModel)]="_Person.CountryModel" required>
+                                        <option *ngFor="let country of _Country" [value]="country.Code">
+                                            {{ country.Name }}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <button (click)="getPerson()" class="btn btn-secondary btn-user btn-block text-white">
+                                    <i class="fas fa-search"></i> Consultar Persona
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary btn-user btn-block text-white"
+                                    title="Guardar">
+                                    <i class="fas fa-save"></i> Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
