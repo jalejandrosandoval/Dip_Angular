@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('UserPassword');
   }
 
-  //
+  // Method Of Login
   public onLogin() {
     if (this.loginForm.valid) {
 
@@ -63,5 +63,4 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  //
 }

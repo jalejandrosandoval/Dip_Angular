@@ -1,7 +1,7 @@
 <div class="card shadow mb-4">
     <div class="card-header">
         <h6 class="text-warning">
-            <i class="fas fa-user-plus"> </i> <b> Formulario... </b>
+            <i class="fas fa-user-plus"> </i> <b> Formulario NgModel... </b>
         </h6>
     </div>
 
@@ -31,20 +31,17 @@
 
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <label class="col-2 col-form-label">Correo</label>
-                                <div class="col-8">
+                                <label class="col-md-12 col-form-label">Correo</label>
+                                <div class="col-md-12">
                                     <input class="form-control form-control-user" type="email" name="correo"
                                         [(ngModel)]="_Person.Email" placeholder="Correo"
                                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required #correo="ngModel" />
-                                    <!-- <small *ngIf="correo.invalid && correo.touched" class="form-text text-danger">
-          El correo es obligatorio
-        </small> -->
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label class="col-2 col-form-label">Pais</label>
-                                <div class="col-8">
+                                <label class="col-md-12 col-form-label">Pais</label>
+                                <div class="col-md-12">
                                     <select class="form-control form-control-user" name="_CountryModel"
                                         [(ngModel)]="_Person.CountryModel" required>
                                         <option *ngFor="let country of _Country" [value]="country.Code">
@@ -53,8 +50,6 @@
                                     </select>
                                 </div>
                             </div>
-
-
                         </div>
 
                         <div class="form-group row">
