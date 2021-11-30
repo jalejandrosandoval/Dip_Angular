@@ -86,6 +86,18 @@ export class HeroesService {
     this._Heroes$.next(this._Heroes);
   }
 
+  // Method for edit a any heroe.
+  public editHeroe(id:number, _heroes: IHeroes){
+    this._Heroes[id] = _heroes;
+    this._Heroes$.next(this._Heroes);
+  }
+
+  // Method for edit any heroe by Id.
+  public deleteHeroe(id: number) {
+    this._Heroes.splice(id, 1);
+    this._Heroes$.next(this._Heroes);
+  }
+
   // Method for find heroe by any term.
   public searchHeore(term: string): IHeroes[] {
     const search = this._Heroes.map((_heroes, index) => {

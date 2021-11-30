@@ -37,5 +37,4 @@ export class FormNgModelComponent implements OnInit {
     console.log(JSON.parse(_person));
   }
 
-
 }

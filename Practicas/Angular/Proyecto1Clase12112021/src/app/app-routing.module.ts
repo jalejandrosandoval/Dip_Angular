@@ -4,10 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 //Import Components General and Shared
 import { AboutComponent } from './Components/General/about/about.component';
 import { HomeComponent } from './Components/General/home/home.component';
-import { SearcherComponent } from './Components/Shared/searcher/searcher.component';
 
 //Import Components Own
-import { HeroeComponent } from './Components/Heroes/Heroe/heroe.component';
 import { ExamplePipeComponent } from './Components/Pipes/example-pipe/example-pipe.component';
 import { LoginComponent } from './Components/General/login/login.component';
 import { FormsComponent } from './Components/General/Forms/forms/forms.component';

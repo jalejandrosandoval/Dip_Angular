@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IHeroes } from 'src/app/Interfaces/IHeroes';
 import { HeroesService } from 'src/app/Services/Heroes/heroes.service';
 
@@ -21,7 +22,8 @@ export class HeroesComponent implements OnInit {
       House: "DC"
     };
 
-  constructor(private _heroesService: HeroesService) { }
+  constructor(private _heroesService: HeroesService,
+    private _router: Router) { }
 
   ngOnInit(): void {
     this._heroesService.getHeroes().subscribe(
@@ -32,7 +34,8 @@ export class HeroesComponent implements OnInit {
   }
 
   public addHeroe(){
-    this._heroesService.addHeroe(this._heroeNew);
+    console.log("formsheroecreate");
+    this._router.navigate(['/formsheroecreate']);
   }
 
   // public ngOnDestroy(): void{

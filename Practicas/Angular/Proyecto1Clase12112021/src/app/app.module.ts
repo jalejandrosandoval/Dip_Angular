@@ -28,11 +28,7 @@ import { ExamplePipeComponent } from './Components/Pipes/example-pipe/example-pi
 import { LoginComponent } from './Components/General/login/login.component';
 
 // Import Pipes
-import { PasswordPipe } from './Pipes/Password/password.pipe';
-import { UpercasePipe } from './Pipes/Upercase/upercase.pipe';
-import { CapitalizePipePipe } from './Pipes/CapitalizePipe/capitalize-pipe.pipe';
-import { SecureDOMPipe } from './Pipes/SecureDOM/secure-dom.pipe';
-import { LimitStringPipe } from './Pipes/LimitString/limit-string.pipe';
+import { PipesModule } from './Pipes/pipes.module';
 
 registerLocaleData(localEs);
 registerLocaleData(localFr);
@@ -45,13 +41,8 @@ registerLocaleData(localFr);
     AboutComponent,
     FooterComponent,
     HeroeComponent,
-    PasswordPipe,
-    UpercasePipe,
     ExamplePipeComponent,
-    CapitalizePipePipe,
-    SecureDOMPipe,
     LoginComponent,
-    LimitStringPipe,
     FormNgModelComponent,
     FormsComponent,
     ReactiveFormsComponent
@@ -61,11 +52,13 @@ registerLocaleData(localFr);
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule    
+    FormsModule,
+    PipesModule    
   ],
   providers: [
-    HeroesService, {provide: LOCALE_ID, useValue: 'es'},
-    LoginService
+    HeroesService, 
+    LoginService,
+    {provide: LOCALE_ID, useValue: 'es'}
   ],
   bootstrap: [AppComponent]
 })
