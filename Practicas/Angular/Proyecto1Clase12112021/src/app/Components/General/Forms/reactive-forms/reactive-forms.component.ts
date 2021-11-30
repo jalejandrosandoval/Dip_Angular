@@ -49,7 +49,7 @@ export class ReactiveFormsComponent implements OnInit {
           this.validatePassword
         ]
       }],
-      Address: [this.formBuilder.group(
+      Address : this.formBuilder.group(
         {
           Street: ['', {
             Validators: [
@@ -62,7 +62,7 @@ export class ReactiveFormsComponent implements OnInit {
             ]
           }]
         }
-      )]
+      )
     });
   }
 
@@ -113,6 +113,14 @@ export class ReactiveFormsComponent implements OnInit {
   private get gPassword(): AbstractControl{
     return this.ReactiveForm.get('Password')!;
   }
+
+  private get gAddressStreet(): AbstractControl{
+    return this.ReactiveForm.get('Address.Street')!;
+  }
+
+  private get gAddressAvenue(): AbstractControl{
+    return this.ReactiveForm.get('Address.Avenue')!;
+  }
   
   // Method for validate the fields
   public get gDateCreateValid() {
@@ -133,6 +141,14 @@ export class ReactiveFormsComponent implements OnInit {
 
   public get gReactiveFormValid(){
     return this.gUsernameValid || this.gPasswordValid || this.gDateCreateValid || this.gEmailValid;
+  }
+
+  public get gAddressStreetValid(){
+    return this.gAddressStreet.invalid && (this.gAddressStreet.touched || this.gAddressStreet.dirty);
+  }
+
+  public get gAddressAvenueValid(){
+    return this.gAddressAvenue.invalid && (this.gAddressAvenue.touched || this.gAddressAvenue.dirty);
   }
 
   // Save the data of Form

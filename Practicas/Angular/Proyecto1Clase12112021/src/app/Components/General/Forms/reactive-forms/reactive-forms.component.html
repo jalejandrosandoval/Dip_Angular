@@ -61,21 +61,36 @@
                                     <small *ngIf="gPasswordValid" class="text-danger">
                                         <b>* Campo Requerido: </b> Contraseña Obligatoria!
                                     </small>
-                                    <br />
+                                    <br/>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- <div formGroupName="Address">
-                          <label for="Password"> Direccion:: </label>
-                          <input name="Street" type="text" placeholder="Calle..." class="form-control form-control-user" formControlName="Street" />
-                          <br />
-                          <input name="Avenue" type="text" placeholder="Avenida..." class="form-control form-control-user" formControlName="Avenue" />
-                        </div> -->
+                            
+                        <div class="col-md-12 form-group row ml-0" formGroupName="Address">
+                            <label class="col-md-12 col-form-label" for="Address"> Direccion: </label>
+                            <div class="col-md-6">
+                                <input name="Street" type="text" placeholder="Calle..." class="form-control form-control-user" title="Calle"
+                                    formControlName="Street" required />
+                                    <small *ngIf="gAddressStreetValid" class="text-danger">
+                                        <b>* Campo Requerido: </b> Calle Obligatoria!
+                                    </small>
+                                    <br/>
+                            </div>
+                            <div class="col-md-6">
+                                <input name="Avenue" type="text" placeholder="Avenida..." class="form-control form-control-user" title="Avenida"
+                                    formControlName="Avenue" required />
+                                    <small *ngIf="gAddressAvenueValid" class="text-danger">
+                                        <b>* Campo Requerido: </b> Avenida Obligatoria!
+                                    </small>
+                                    <br/>
+                            </div>
+                        </div>
+                        </div>
 
                         <div class="form-group row">
                             <div class="col-lg-4 mb-3 mb-lg-0 offset-lg-4">
-                                <button class="btn btn-danger btn-user btn-block text-white" title="Cancelar" (click)="onReset()">
+                                <button class="btn btn-danger btn-user btn-block text-white" title="Cancelar"
+                                    (click)="onReset()">
                                     <i class="fas fa-times-circle"></i> Cancelar
                                 </button>
                             </div>

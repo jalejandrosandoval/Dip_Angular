@@ -30,8 +30,7 @@ export class NavBarComponent implements OnInit {
 
   // Method to termintate the session user.
   public Logout(){
-    this._loginService._User$.unsubscribe();
-    this._loginService._User$ = new Subject();
     this._User = "";
   }
+
 }

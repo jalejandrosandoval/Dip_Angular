@@ -26,12 +26,13 @@ export class FormNgModelComponent implements OnInit {
       })
     })
   }
-
+  
+  // Method For save the data in the form
   public saveForm() {
-    let _person = sessionStorage.setItem('form', JSON.stringify(this._Person));
-    console.log(JSON.stringify(_person));
+    sessionStorage.setItem('form', JSON.stringify(this._Person));
   }
 
+  // Get the person from sessionStorage
   public getPerson() {
     let _person = sessionStorage.getItem('form') || "";
     console.log(JSON.parse(_person));
