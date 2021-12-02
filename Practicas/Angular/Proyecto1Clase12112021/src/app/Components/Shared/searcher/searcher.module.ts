@@ -2,13 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Import Modules
-import { BrowserModule } from '@angular/platform-browser';
+import { HeroesCardModule } from '../../Heroes/Heroes-Card/heroes-card.module';
 
 // Import Components
 import { SearcherComponent } from './searcher.component';
-import { HeroesCardModule } from '../../Heroes/Heroes-Card/heroes-card.module';
-import { AppRoutingModule } from 'src/app/app-routing.module';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,10 +13,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    HeroesCardModule,
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    HeroesCardModule
   ],
   exports: [
     SearcherComponent

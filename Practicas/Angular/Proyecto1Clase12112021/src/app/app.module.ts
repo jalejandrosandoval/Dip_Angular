@@ -31,7 +31,6 @@ registerLocaleData(localFr);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HeroesModule,
     NavBarModule,
     FooterModule
   ],

@@ -139,16 +139,17 @@ export class ReactiveFormsComponent implements OnInit {
     return this.gPassword.invalid && (this.gPassword.touched || this.gPassword.dirty);
   }
 
-  public get gReactiveFormValid(){
-    return this.gUsernameValid || this.gPasswordValid || this.gDateCreateValid || this.gEmailValid;
-  }
-
   public get gAddressStreetValid(){
     return this.gAddressStreet.invalid && (this.gAddressStreet.touched || this.gAddressStreet.dirty);
   }
 
   public get gAddressAvenueValid(){
     return this.gAddressAvenue.invalid && (this.gAddressAvenue.touched || this.gAddressAvenue.dirty);
+  }
+
+  public get gReactiveFormValid(){
+    return this.gUsernameValid || this.gPasswordValid || this.gDateCreateValid || this.gEmailValid 
+    || this.gAddressStreetValid || this.gAddressAvenueValid;
   }
 
   // Save the data of Form
