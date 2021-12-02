@@ -8,7 +8,6 @@ import { HomeComponent } from './Components/General/home/home.component';
 //Import Components Own
 import { ExamplePipeComponent } from './Components/Pipes/example-pipe/example-pipe.component';
 import { LoginComponent } from './Components/General/login/login.component';
-import { FormsComponent } from './Components/General/Forms/forms/forms.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,7 +17,9 @@ const routes: Routes = [
     path: 'heroes', 
     loadChildren: () => import ('./Components/Heroes/heroes.module').then(m => m.HeroesModule)
   },
-  { path: 'forms', component: FormsComponent},
+  { path: 'forms',
+    loadChildren:() => import ('./Components/General/Forms/forms/forms.module').then(m => m.Forms_Module)
+  },
   { path: 'pipes', component: ExamplePipeComponent},
   { path: '**', pathMatch: 'full', redirectTo: "home" },
 ];

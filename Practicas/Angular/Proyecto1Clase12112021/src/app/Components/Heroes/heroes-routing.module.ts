@@ -13,10 +13,11 @@ const routes: Routes = [
       { path: 'search/:term', component: SearcherComponent},
       { path: 'heroe/:index', component: HeroeComponent },
       { path: 'formsheroecreate', component: FormHeroesCreateComponent},
-      { path: '*', component: HeroesComponent }
+      { path: '**', component: HeroesComponent }
     ]
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

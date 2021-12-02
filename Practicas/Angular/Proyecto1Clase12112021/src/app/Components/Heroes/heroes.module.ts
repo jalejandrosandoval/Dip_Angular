@@ -3,25 +3,24 @@ import { CommonModule } from '@angular/common';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroesComponent } from './heroes.component';
-import { HeroesCardComponent } from './Heroes-Card/heroes-card.component';
-import { SearcherComponent } from '../Shared/searcher/searcher.component';
-import { FormHeroesCreateComponent } from './form-heroes-create/form-heroes-create.component';
-import { FormHeroesEditComponent } from './form-heroes-edit/form-heroes-edit.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeroesCardModule } from './Heroes-Card/heroes-card.module';
+import { HeroeModule } from './Heroe/heroe.module';
+import { FormHeroesEditModule } from './form-heroes-edit/form-heroes-edit.module';
+import { FormHeroesCreateModule } from './form-heroes-create/form-heroes-create.module';
 
 
 @NgModule({
   declarations: [
-    HeroesComponent,
-    HeroesCardComponent,
-    SearcherComponent,
-    FormHeroesCreateComponent,
-    FormHeroesEditComponent
+    HeroesComponent
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    ReactiveFormsModule
+    HeroesCardModule,
+    HeroeModule,
+    FormHeroesEditModule,
+    FormHeroesCreateModule
   ]
 })
 export class HeroesModule { }
