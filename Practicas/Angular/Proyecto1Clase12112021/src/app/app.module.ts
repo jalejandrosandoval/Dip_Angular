@@ -18,6 +18,7 @@ import { NavBarModule } from './Components/Shared/nav-bar/nav-bar.module';
 import { LoginModule } from './Components/General/login/login.module';
 import { FooterModule } from './Components/Shared/footer/footer.module';
 import { ExamplePipeModule } from './Components/Pipes/example-pipe/example-pipe.module';
+import { HomeModule } from './Components/General/home/home.module';
 
 registerLocaleData(localEs);
 registerLocaleData(localFr);
@@ -30,8 +31,6 @@ registerLocaleData(localFr);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LoginModule,
-    ExamplePipeModule,
     HeroesModule,
     NavBarModule,
     FooterModule
